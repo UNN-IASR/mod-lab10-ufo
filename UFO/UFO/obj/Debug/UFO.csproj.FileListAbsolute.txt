@@ -1,0 +1,10 @@
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\obj\Debug\UFO.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\obj\Debug\UFO.Properties.Resources.resources
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\obj\Debug\UFO.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\obj\Debug\UFO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\bin\Debug\UFO.exe.config
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\bin\Debug\UFO.exe
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\bin\Debug\UFO.pdb
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\obj\Debug\UFO.exe
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\obj\Debug\UFO.pdb
+C:\Users\Admin\source\repos\GitMy\UFO\UFO\obj\Debug\UFO.Form1.resources
