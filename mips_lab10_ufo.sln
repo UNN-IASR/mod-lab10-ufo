@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mips_lab10_ufo", "mips_lab10_ufo\mips_lab10_ufo.csproj", "{2DAE1B61-535C-49D0-BD53-03EC681F123E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DAE1B61-535C-49D0-BD53-03EC681F123E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DAE1B61-535C-49D0-BD53-03EC681F123E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DAE1B61-535C-49D0-BD53-03EC681F123E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DAE1B61-535C-49D0-BD53-03EC681F123E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF1D7089-E530-4D58-867A-F56A49303C23}
+	EndGlobalSection
+EndGlobal
