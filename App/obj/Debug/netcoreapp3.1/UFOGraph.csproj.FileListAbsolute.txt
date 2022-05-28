@@ -1,0 +1,16 @@
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\bin\Debug\netcoreapp3.1\UFOGraph.exe
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\bin\Debug\netcoreapp3.1\UFOGraph.deps.json
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\bin\Debug\netcoreapp3.1\UFOGraph.runtimeconfig.json
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\bin\Debug\netcoreapp3.1\UFOGraph.runtimeconfig.dev.json
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\bin\Debug\netcoreapp3.1\UFOGraph.dll
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\bin\Debug\netcoreapp3.1\UFOGraph.pdb
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.csproj.AssemblyReference.cache
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.LineModeling.resources
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.csproj.GenerateResource.cache
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.AssemblyInfoInputs.cache
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.AssemblyInfo.cs
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.csproj.CoreCompileInputs.cache
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.dll
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.pdb
+C:\Users\Makskyreer\Desktop\Штанюк\mod-task10-ufo-b21\App\obj\Debug\netcoreapp3.1\UFOGraph.genruntimeconfig.cache
