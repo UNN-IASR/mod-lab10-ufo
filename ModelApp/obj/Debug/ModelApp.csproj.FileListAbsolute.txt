@@ -1,0 +1,9 @@
+E:\ModelApp\obj\Debug\ModelApp.csprojAssemblyReference.cache
+E:\ModelApp\obj\Debug\ModelApp.Properties.Resources.resources
+E:\ModelApp\obj\Debug\ModelApp.csproj.GenerateResource.cache
+E:\ModelApp\obj\Debug\ModelApp.csproj.CoreCompileInputs.cache
+E:\ModelApp\bin\Debug\ModelApp.exe.config
+E:\ModelApp\bin\Debug\ModelApp.exe
+E:\ModelApp\bin\Debug\ModelApp.pdb
+E:\ModelApp\obj\Debug\ModelApp.exe
+E:\ModelApp\obj\Debug\ModelApp.pdb
