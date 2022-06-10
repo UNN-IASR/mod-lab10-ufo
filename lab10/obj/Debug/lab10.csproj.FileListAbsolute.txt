@@ -1,0 +1,11 @@
+D:\projects\МИПиС\lab10\lab10\obj\Debug\lab10.csproj.AssemblyReference.cache
+D:\projects\МИПиС\lab10\lab10\obj\Debug\lab10.csproj.SuggestedBindingRedirects.cache
+D:\projects\МИПиС\lab10\lab10\obj\Debug\lab10.Form1.resources
+D:\projects\МИПиС\lab10\lab10\obj\Debug\lab10.Properties.Resources.resources
+D:\projects\МИПиС\lab10\lab10\obj\Debug\lab10.csproj.GenerateResource.cache
+D:\projects\МИПиС\lab10\lab10\obj\Debug\lab10.csproj.CoreCompileInputs.cache
+D:\projects\МИПиС\lab10\lab10\bin\Debug\lab10.exe.config
+D:\projects\МИПиС\lab10\lab10\bin\Debug\lab10.exe
+D:\projects\МИПиС\lab10\lab10\bin\Debug\lab10.pdb
+D:\projects\МИПиС\lab10\lab10\obj\Debug\lab10.exe
+D:\projects\МИПиС\lab10\lab10\obj\Debug\lab10.pdb
