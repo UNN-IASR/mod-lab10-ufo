@@ -1,0 +1,10 @@
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\obj\Debug\10.lab.csproj.AssemblyReference.cache
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\obj\Debug\_10.lab.Form1.resources
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\obj\Debug\_10.lab.Properties.Resources.resources
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\obj\Debug\10.lab.csproj.GenerateResource.cache
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\obj\Debug\10.lab.csproj.CoreCompileInputs.cache
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\bin\Debug\10.lab.exe.config
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\bin\Debug\10.lab.exe
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\bin\Debug\10.lab.pdb
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\obj\Debug\10.lab.exe
+C:\Users\Alena\Desktop\Program\Modeling inform processing\10.WinForms\10.lab\obj\Debug\10.lab.pdb
