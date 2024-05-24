@@ -13,9 +13,9 @@ namespace UFO
 {
     public partial class Form1 : Form
     {
-        int accuracy = 3;
-        double step = 5;
-        int around = 15;
+        int accuracy = 2;
+        double step = 20;
+        int around = 25;
         PointD ufo;
         PointD target;
         List<PointF> trail;
@@ -88,6 +88,7 @@ namespace UFO
             target = new PointD(this.ClientRectangle.Right - 20, this.ClientRectangle.Bottom - 20);
             trail = new List<PointF>();
             angle = Math.Atan((double)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X));
+            timer1.Interval = 100;
             timer1.Start();
         }
 
@@ -120,7 +121,7 @@ namespace UFO
             g.FillEllipse(new SolidBrush(Color.Red),
                 k * (target.IntX - 5), k * (target.IntY - 5), k * 10, k * 10);
             Pen dashPen = new Pen(new SolidBrush(Color.Red), 2);
-            dashPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            dashPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             g.DrawEllipse(dashPen, 
                 k * (target.IntX - around / 2), k * (target.IntY - around / 2), k * around, k * around);
 
@@ -140,7 +141,8 @@ namespace UFO
 
         public bool CheckAround()
         {
-            return true;
+            return ufo.X < target.X + around / 2 && ufo.X > target.X - around / 2 &&
+                ufo.Y < target.Y + around / 2 && ufo.Y > target.Y - around / 2;
         }
 
 
