@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Schema;
+using static UFO.Form1;
 
 namespace UFO
 {
@@ -23,6 +24,7 @@ namespace UFO
         int diry;
         double minDist;
         List<float> chart;
+        bool isResizing = false;
 
         public struct PointD
         {
@@ -105,11 +107,8 @@ namespace UFO
             InitializeComponent();
             ufo = new PointD(20, 20);
             target = new PointD(this.pictureBox1.Width - 20, this.pictureBox1.Height - 20);
-            start = new PointD(ufo.X, ufo.Y);
             trail = new List<PointF>();
-            setDir();
-            minDist = Dist();
-            angle = Arctg((double)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X), accuracy);
+            ResetSP();
             chart = new List<float>();
             timer1.Interval = 50;
             timer1.Start();
@@ -140,10 +139,12 @@ namespace UFO
 
                 ufo.X = start.X;
                 ufo.Y = start.Y;
-                minDist = Dist();
                 accuracy++;
-                angle = Arctg((double)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X), accuracy);
-                trail.Clear();
+                if (accuracy > 15)
+                {
+                    ResetChart();
+                }
+                ResetSP();
             }
         }
 
@@ -153,7 +154,6 @@ namespace UFO
             minDist = Dist();
             return buf;
         }
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -166,44 +166,35 @@ namespace UFO
             if (target.X > this.pictureBox1.Width)
             {
                 target.X = this.pictureBox1.Width - 20;
-                start = new PointD(ufo.X, ufo.Y);
-                trail.Clear();
-                minDist = Dist();
-                angle = Arctg((double)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X), accuracy);
-                setDir();
+                ResetSP();
+                ResetChart();
             }
             if (target.Y > this.pictureBox1.Height)
             {
                 target.Y = this.pictureBox1.Height - 20;
-                start = new PointD(ufo.X, ufo.Y);
-                trail.Clear();
-                minDist = Dist();
-                angle = Arctg((double)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X), accuracy);
-                setDir();
+                ResetSP();
+                ResetChart();
             }
             if (ufo.X > this.pictureBox1.Width)
             {
                 ufo.X = 20;
-                start = new PointD(ufo.X, ufo.Y);
-                trail.Clear();
-                minDist = Dist();
-                angle = Arctg((double)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X), accuracy);
-                setDir();
+                ResetSP();
+                ResetChart();
             }
             if (ufo.Y > this.pictureBox1.Height)
             {
                 ufo.Y = 20;
-                start = new PointD(ufo.X, ufo.Y);
-                trail.Clear();
-                minDist = Dist();
-                angle = Arctg((double)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X), accuracy);
-                setDir();
+                ResetSP();
+                ResetChart();
             }
-
+            timer1.Start();
+            pictureBox2.Refresh();
+            isResizing = false;
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
+            if (isResizing) return;
             Graphics g = e.Graphics;
             g.ScaleTransform(scale, scale);
 
@@ -227,49 +218,84 @@ namespace UFO
         {
             if (e.Button == MouseButtons.Left)
             {
-                trail.Clear();
-                start = new PointD(e.Location.X, e.Location.Y);
                 ufo = new PointD(e.Location.X, e.Location.Y);
-                start = new PointD(ufo.X, ufo.Y);
-                minDist = Dist();
-                angle = Arctg((double)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X), accuracy);
-                setDir();
+                ResetSP();
+                ResetChart();
             }
             else if (e.Button == MouseButtons.Right)
             {
                 target = new PointD(e.Location.X, e.Location.Y);
-                start = new PointD(ufo.X, ufo.Y);
-                trail.Clear();
-                minDist = Dist();
-                angle = Arctg((float)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X), accuracy);
-                setDir();
+                ResetSP();
+                ResetChart();
             }
         }
 
         private void pictureBox2_Paint(object sender, PaintEventArgs e)
         {
+            if (isResizing) return;
             Graphics g = e.Graphics;
 
             int h = pictureBox2.Height;
             int w = pictureBox2.Width;
-            Pen axes = new Pen(new SolidBrush(Color.Black), 3);
+            Pen axes = new Pen(new SolidBrush(Color.Black), 1);
             axes.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
             g.DrawLine(axes, 10, h - 5, 10, 10);
             g.DrawLine(axes, 5, h - 10, w - 10, h - 10);
 
-            for (int i = 1; i < accuracy; i++)
+            g.TranslateTransform(10, h - 10);
+
+            for (int i = 1; i < chart.Count; i++)
             {
                 g.DrawLine(new Pen(new SolidBrush(Color.Black), 2),
-                    (w - 30) * (i) / 15 + 15, h - (h - 30) * chart[i - 1] / Max(chart) + 15,
-                    (w - 30) * (i + 1) / 15 + 15, h - (h - 30) * chart[i] / Max(chart) + 15);
+                    (w - 30) * i / 15 + 5, - (h - 30) * chart[i - 1] / Max(chart) + 15,
+                    (w - 30) * (i + 1) / 15 + 5, - (h - 30) * chart[i] / Max(chart) + 15);
+            }
+            if (w > 200 && h > 200)
+            {
+                if (chart.Count > 1)
+                    for (int i = 0; i < chart.Count; i++)
+                    {
+                        g.DrawString(Math.Round(chart[i], 3).ToString(), new Font("Arial", 10), new SolidBrush(Color.Black),
+                            (w - 30) * i / 15 + 5, -(h - 30) * chart[i] / Max(chart) + 15);
+                    }
+                g.DrawString("accuracy", new Font("Arial", 12), new SolidBrush(Color.Black), w - 100, -25);
+                g.RotateTransform(-90);
+                g.DrawString("neighborhood", new Font("Arial", 12), new SolidBrush(Color.Black), h - 150, 5);
             }
         }
 
         public float Max(List<float> f)
         {
             float max = f[0];
-            foreach(float m in f) { if (m > max) max = m; }
+            foreach (float m in f) { if (m > max) max = m; }
             return max;
+        }
+
+        public void ResetSP()
+        {
+            start = new PointD(ufo.X, ufo.Y);
+            trail.Clear();
+            minDist = Dist();
+            angle = Arctg((double)Math.Abs(target.Y - ufo.Y) / Math.Abs(target.X - ufo.X), accuracy);
+            setDir();
+        }
+
+        public void ResetChart()
+        {
+            chart.Clear();
+            accuracy = 1;
+            pictureBox2.Refresh();
+        }
+
+        private void Form1_ResizeBegin(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            isResizing = true;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            this.Form1_ResizeEnd(sender, e);
         }
     }
 }

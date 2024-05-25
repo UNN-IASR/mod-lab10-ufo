@@ -122,7 +122,9 @@
             this.MinimumSize = new System.Drawing.Size(616, 405);
             this.Name = "Form1";
             this.Text = "UFO";
+            this.ResizeBegin += new System.EventHandler(this.Form1_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
