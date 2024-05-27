@@ -172,8 +172,8 @@ namespace mod_lab10_ufo
                     }
                     if (count < 1000)
                     {
-                        chart1.Series[0].Points.AddXY(val, n);
-                        chart1.Series[1].Points.AddXY(val, n);
+                        chart1.Series[0].Points.AddXY(n, val);
+                        chart1.Series[1].Points.AddXY(n, val);
                         break;
 
 
